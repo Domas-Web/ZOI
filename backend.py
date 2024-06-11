@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, render_template
+from flask_cors import CORS
 import requests
 
+
 app = Flask(__name__)
+CORS(app)
 
 apiKey = '8Fs3phbiI63XIG4WO2lBe83X8STE2ioC42BldAsS'
 urlpoolprice = 'https://public-api.dextools.io/trial/v2/pool/arbitrum/0x874cda82c3e797d3bdab4057560af1f756cc24a4/price'
