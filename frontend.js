@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fetch and display Pool Price Data
     async function fetchPoolData() {
         const data = await fetchData(urlPoolPrice);
+
         if (data) {
             let volume24h = data.volume24h ?? 0;
             document.getElementById('volume24h').innerText = `$${volume24h.toFixed(0)}`;
